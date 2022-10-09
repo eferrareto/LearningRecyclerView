@@ -27,10 +27,69 @@ class MainActivity : AppCompatActivity() {
         rcView.adapter = MainAdapter(lista)
         rcView.layoutManager = LinearLayoutManager(this)
 
-
-        val categoria1 = Categoria(title = "My name", name = "Erick")
-
-        lista.add(categoria1)
+        lista.add(
+            Categoria("My Number", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Gilfriend", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Brother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Mother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Father", "1199954285")
+        )
+        lista.add(
+            Categoria("My Number", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Gilfriend", "1199954285")
+        )
+        lista.add(
+            Categoria("My Number", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Gilfriend", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Brother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Mother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Father", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Brother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Mother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Father", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Brother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Mother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Father", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Brother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Mother", "1199954285")
+        )
+        lista.add(
+            Categoria("Number my Father", "1199954285")
+        )
 
 
 
@@ -53,11 +112,11 @@ class MainActivity : AppCompatActivity() {
 
     }
     private inner class MainViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        fun bind(item: Categoria){
-
-            val txtTitle : TextView = findViewById(R.id.txtTitle)
-            val txtText : TextView = findViewById(R.id.txtText)
-            txtTitle.text = item.title
+        fun bind(item:Categoria){
+            val text : TextView = itemView.findViewById(R.id.txtTitle)
+            val textName : TextView = itemView.findViewById(R.id.txtName)
+            textName.text = item.name
+            text.text = item.title
         }
     }
 }
