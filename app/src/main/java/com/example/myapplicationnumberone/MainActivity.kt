@@ -28,54 +28,15 @@ class MainActivity : AppCompatActivity() {
         rcView.layoutManager = LinearLayoutManager(this)
 
 
-        lista.add(
-            Categoria(
-                title = "Olá Mundo",
-                name = "Erick Ferrareto"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My World",
-                name = "Tayna Nogueira"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My Brother",
-                name = "Pedro Henrique"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My Mother",
-                name = "Alessandra Ferrareto"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My father",
-                name = "Haroldo Ferrareto"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My Grandmother",
-                name = "Neide Souza"
-            )
-        )
-        lista.add(
-            Categoria(
-                title = "My Grandfather",
-                name = "Valdemar Pereira"
-            )
-        )
+        val categoria1 = Categoria(title = "My name", name = "Erick")
+
+        lista.add(categoria1)
 
 
 
 
     }
-    private inner class MainAdapter(var lista : List<Categoria>) : RecyclerView.Adapter<MainViewHolder>(){
+    private inner class MainAdapter(var lista : MutableList<Categoria>) : RecyclerView.Adapter<MainViewHolder>(){
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
             val view = layoutInflater.inflate(R.layout.layout_rv, parent, false)
             return MainViewHolder(view)
@@ -95,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         fun bind(item: Categoria){
 
             val txtTitle : TextView = findViewById(R.id.txtTitle)
+            val txtText : TextView = findViewById(R.id.txtText)
             txtTitle.text = item.title
         }
     }
